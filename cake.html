@@ -4,20 +4,28 @@
   <source src="music/bg.mp3" type="audio/mp3">
 </audio>
 
+<div class="bg-hearts"></div>
+
+<div class="glass">
+    <div class="floating-heart">💖</div>
+
+    <h1>🎂 Happy Anniversary</h1>
+
+    <div class="cake">🎂</div>
+
+    <p class="subtitle">A small surprise made with love 💌</p>
+
+    <button class="love-btn" onclick="location.href='letter.html'">
+        Open Love Letter 💌
+    </button>
+</div>
+
 <script>
 document.body.addEventListener('click', function () {
     document.getElementById('bgMusic').play();
 }, { once: true });
 </script>
 
-<div class="glass">
-<h1>🎂 Happy Anniversary</h1>
-<div class="cake">🎂</div>
-
-<button onclick="location.href='letter.html'">
-Open Love Letter 💌
-</button>
-</div>
-
 <script src="js/script.js"></script>
+
 </body>
