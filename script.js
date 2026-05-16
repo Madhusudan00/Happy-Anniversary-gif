@@ -1,5 +1,5 @@
 function checkPass(){
-if(document.getElementById("pass").value==="love"){
+if(document.getElementById("pass").value==="07/24"){
 window.location.href="cake.html";
 }else{
 alert("Wrong password 💔");
