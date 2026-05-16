@@ -43,7 +43,7 @@ animation:pulse 2s infinite;
 50%{transform:scale(1.05);}
 }
 
-/* glass box */
+/* box */
 .box{
 background:rgba(255,255,255,0.1);
 backdrop-filter:blur(10px);
@@ -54,17 +54,6 @@ width:80%;
 max-width:300px;
 }
 
-/* input */
-input{
-width:90%;
-padding:10px;
-border:none;
-border-radius:10px;
-margin-bottom:10px;
-outline:none;
-}
-
-/* button */
 button{
 background:#ff4f81;
 border:none;
@@ -79,28 +68,18 @@ button:hover{
 transform:scale(1.1);
 box-shadow:0 0 15px #ff4f81;
 }
-
-label{
-font-size:14px;
-display:block;
-margin:10px 0;
-}
 </style>
 
 </head>
 
 <body>
 
-<!-- 💖 TITLE -->
 <h1>🔐 Unlock Our Love Story</h1>
+
 <div class="box">
-
-    <h2>Ready to unlock our love story? 💖</h2>
-
+    <h2>Ready? 💖</h2>
     <button onclick="unlockStory()">Unlock ❤️</button>
-
 </div>
-
 
 <!-- 🎧 BACKGROUND MUSIC -->
 <audio id="bgMusic" loop>
@@ -108,7 +87,6 @@ margin:10px 0;
 </audio>
 
 <script>
-/* start music on first click (browser safe) */
 document.body.addEventListener('click', function () {
     document.getElementById('bgMusic').play();
 }, { once: true });
