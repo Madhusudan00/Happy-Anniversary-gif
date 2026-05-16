@@ -1,27 +1,8 @@
-function checkPass(){
-    let input = document.getElementById("pass").value.trim().toLowerCase();
-
-    const correctPassword = "baby";
-
-    if(input === correctPassword){
-        window.location.href = "cake.html";
-    } else {
-        alert("Wrong password 💔");
-    }
+function unlockStory(){
+    window.location.href = "cake.html";
 }
 
-/* SHOW / HIDE PASSWORD */
-function togglePassword(){
-    let pass = document.getElementById("pass");
-
-    if(pass.type === "password"){
-        pass.type = "text";
-    } else {
-        pass.type = "password";
-    }
-}
-
-/* CLICK SOUND */
+/* CLICK SOUND (KEEP ONLY IF YOU WANT) */
 let clickSound = new Audio("sound/click.mp3");
 
 /* OPEN MEDIA */
