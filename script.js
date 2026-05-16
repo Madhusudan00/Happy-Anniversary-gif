@@ -1,7 +1,7 @@
 function checkPass(){
     let input = document.getElementById("pass").value.trim();
 
-    if(input === "iloveyou"){
+    if(input === "baby"){
         window.location.href = "cake.html";
     } else {
         alert("Wrong password 💔");
