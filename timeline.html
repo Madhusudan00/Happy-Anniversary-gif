@@ -1,0 +1,56 @@
+<body>
+
+<audio autoplay loop>
+<source src="music/bg.mp3">
+</audio>
+
+<h1>📸 Our Timeline</h1>
+
+<div class="grid">
+
+<!-- 💖 MEET -->
+<div class="card" onclick="openMedia('video','videos/meet.mp4','💖 First We Met')">
+  <div class="hearts">💖💕</div>
+  <img src="images/meet.jpg">
+  <p>First We Met</p>
+</div>
+
+<!-- 💋 KISS -->
+<div class="card" onclick="openMedia('video','videos/kiss.mp4','💋 First Kiss')">
+  <div class="hearts">💖💖</div>
+  <img src="images/kiss.jpg">
+  <p>First Kiss</p>
+</div>
+
+<!-- 😂 FUNNY -->
+<div class="card" onclick="openMedia('video','videos/funny.mp4','😂 Funny Moment')">
+  <div class="hearts">😂💖</div>
+  <img src="images/funny.jpg">
+  <p>Funny Moment</p>
+</div>
+
+<!-- 🎧 VOICE -->
+<div class="card" onclick="openMedia('audio','audio/voice.mp3','🎧 Voice Note')">
+  <div class="hearts">🎧💖</div>
+  <img src="images/voice.jpg">
+  <p>Voice Note</p>
+</div>
+
+</div>
+
+<!-- POPUP -->
+<div id="popup">
+  <div class="popupBox">
+    <span onclick="closeMedia()">×</span>
+    <h2 id="title"></h2>
+    <video id="video" controls></video>
+    <audio id="audio" controls></audio>
+  </div>
+</div>
+
+<button onclick="location.href='wishes.html'">
+Final ❤️
+</button>
+
+<script src="js/script.js"></script>
+</body>
