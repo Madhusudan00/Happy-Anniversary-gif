@@ -5,6 +5,16 @@
 </head>
 
 <body class="center">
+    
+    <audio id="bgMusic" loop>
+  <source src="music/bg.mp3" type="audio/mp3">
+</audio>
+
+<script>
+document.body.addEventListener('click', function () {
+    document.getElementById('bgMusic').play();
+}, { once: true });
+</script>
 
 <div class="glass">
 <h1>🔐 Enter Password</h1>
