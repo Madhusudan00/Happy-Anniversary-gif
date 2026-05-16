@@ -1,10 +1,10 @@
 function checkPass(){
     let input = document.getElementById("pass").value.trim();
 
-    if(input === "07/24"){
+    if(input === "iloveyou"){
         window.location.href = "cake.html";
     } else {
-        alert("Wrong password 💔 Try again");
+        alert("Wrong password 💔");
     }
 }
 
