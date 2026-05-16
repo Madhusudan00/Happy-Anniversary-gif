@@ -1,16 +1,12 @@
-<body>
+<body class="timeline-page">
 
 <audio id="bgMusic" loop>
   <source src="music/bg.mp3" type="audio/mp3">
 </audio>
 
-<script>
-document.body.addEventListener('click', function () {
-    document.getElementById('bgMusic').play();
-}, { once: true });
-</script>
+<div class="timeline-bg">💖 💕 💖 💕 💖 💕 💖</div>
 
-<h1>📸 Our Timeline</h1>
+<h1 class="title">📸 Our Timeline</h1>
 
 <div class="grid">
 
@@ -47,16 +43,27 @@ document.body.addEventListener('click', function () {
 <!-- POPUP -->
 <div id="popup">
   <div class="popupBox">
-    <span onclick="closeMedia()">×</span>
+
+    <span class="close" onclick="closeMedia()">×</span>
+
     <h2 id="title"></h2>
+
     <video id="video" controls></video>
     <audio id="audio" controls></audio>
+
   </div>
 </div>
 
-<button onclick="location.href='wishes.html'">
+<button class="final-btn" onclick="location.href='wishes.html'">
 Final ❤️
 </button>
 
+<script>
+document.body.addEventListener('click', function () {
+    document.getElementById('bgMusic').play();
+}, { once: true });
+</script>
+
 <script src="js/script.js"></script>
+
 </body>
