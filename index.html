@@ -18,14 +18,14 @@ color:white;
 overflow:hidden;
 }
 
-/* floating glow */
+/* animated background hearts */
 body::before{
-content:"💖 💕 💖 💕 💖 💕";
+content:"💖 💕 💖 💕 💖 💕 💖 💕";
 position:absolute;
-font-size:30px;
-opacity:0.08;
-animation:float 12s linear infinite;
+font-size:28px;
+opacity:0.07;
 white-space:nowrap;
+animation:float 14s linear infinite;
 }
 
 @keyframes float{
@@ -33,40 +33,82 @@ white-space:nowrap;
 100%{transform:translateY(-100vh);}
 }
 
+/* soft glow overlay */
+body::after{
+content:"";
+position:absolute;
+width:100%;
+height:100%;
+background:radial-gradient(circle, rgba(255,255,255,0.08), transparent 60%);
+pointer-events:none;
+}
+
 /* title */
 h1{
-text-shadow:0 0 10px #ff4f81, 0 0 20px #ff4f81;
-animation:pulse 2s infinite;
+font-size:24px;
+text-shadow:0 0 10px #ff4f81, 0 0 25px #ff4f81;
+animation:pulse 2s infinite ease-in-out;
+z-index:2;
 }
 
 @keyframes pulse{
 50%{transform:scale(1.05);}
 }
 
-/* box */
+/* glass box */
 .box{
-background:rgba(255,255,255,0.1);
-backdrop-filter:blur(10px);
-padding:20px;
-border-radius:20px;
+background:rgba(255,255,255,0.12);
+backdrop-filter:blur(15px);
+padding:25px;
+border-radius:25px;
 text-align:center;
-width:80%;
-max-width:300px;
+width:85%;
+max-width:320px;
+box-shadow:0 0 25px rgba(255,255,255,0.15);
+animation:fadeIn 1s ease;
+z-index:2;
 }
 
+@keyframes fadeIn{
+from{opacity:0; transform:scale(0.8);}
+to{opacity:1; transform:scale(1);}
+}
+
+/* subtitle */
+.box h2{
+font-weight:normal;
+opacity:0.9;
+}
+
+/* button */
 button{
-background:#ff4f81;
+background:linear-gradient(90deg,#ff4f81,#ffcc70);
 border:none;
-padding:10px 20px;
-border-radius:10px;
+padding:12px 25px;
+border-radius:30px;
 color:white;
+font-size:16px;
 cursor:pointer;
 transition:0.3s;
+box-shadow:0 0 15px rgba(255,255,255,0.2);
 }
 
 button:hover{
-transform:scale(1.1);
-box-shadow:0 0 15px #ff4f81;
+transform:scale(1.08);
+box-shadow:0 0 25px #ff4f81;
+}
+
+/* floating sparkle effect */
+.sparkle{
+position:absolute;
+font-size:20px;
+animation:floatSpark 6s infinite ease-in-out;
+opacity:0.6;
+}
+
+@keyframes floatSpark{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-15px);}
 }
 </style>
 
@@ -80,6 +122,11 @@ box-shadow:0 0 15px #ff4f81;
     <h2>Ready? 💖</h2>
     <button onclick="unlockStory()">Unlock ❤️</button>
 </div>
+
+<!-- floating sparkles -->
+<div class="sparkle" style="top:20%;left:10%">✨</div>
+<div class="sparkle" style="top:60%;left:80%">💖</div>
+<div class="sparkle" style="top:40%;left:70%">✨</div>
 
 <!-- 🎧 BACKGROUND MUSIC -->
 <audio id="bgMusic" loop>
