@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="css/style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unlock Love Story 💖</title>
 </head>
 
-<body class="center">
-    
-    <audio id="bgMusic" loop>
-  <source src="music/bg.mp3" type="audio/mp3">
-</audio>
+<body>
 
-<script>
-document.body.addEventListener('click', function () {
-    document.getElementById('bgMusic').play();
-}, { once: true });
-</script>
-
-<div class="glass">
 <h1>🔐 Enter Password</h1>
-<input type="password" id="pass">
+
+<input type="password" id="pass" placeholder="Enter password">
+
+<br><br>
+
+<label style="cursor:pointer;">
+  <input type="checkbox" onclick="togglePassword()">
+  Show Password 👁️
+</label>
+
+<br><br>
+
 <button onclick="checkPass()">Unlock ❤️</button>
-</div>
 
 <script src="js/script.js"></script>
 </body>
