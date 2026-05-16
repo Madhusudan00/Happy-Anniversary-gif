@@ -1,34 +1,34 @@
-<body>
+<body class="letter-page">
 
 <audio id="bgMusic" loop>
   <source src="music/bg.mp3" type="audio/mp3">
 </audio>
 
-<script>
-document.body.addEventListener('click', function () {
-    document.getElementById('bgMusic').play();
-}, { once: true });
-</script>
+<div class="letter-bg">💖 💕 💖 💕 💖 💕</div>
 
-<script>
-document.body.addEventListener('click', function () {
-    document.getElementById('bgMusic').play();
-}, { once: true });
-</script>
+<div class="glass letter-box">
 
-<div class="glass letter">
+    <div class="spark">✨</div>
 
-<h2>💌 My Love Letter</h2>
+    <h2>💌 My Love Letter</h2>
 
-<p>
-From the moment I met you,<br>
-you became my forever ❤️
-</p>
+    <p class="typewriter">
+        From the moment I met you,<br>
+        you became my forever ❤️
+    </p>
+
+    <button class="love-btn" onclick="location.href='timeline.html'">
+        Our Memories 📸
+    </button>
 
 </div>
 
-<button onclick="location.href='timeline.html'">
-Our Memories 📸
-</button>
+<script>
+document.body.addEventListener('click', function () {
+    document.getElementById('bgMusic').play();
+}, { once: true });
+</script>
+
+<script src="js/script.js"></script>
 
 </body>
