@@ -4,18 +4,27 @@ function checkPass(){
     if(input === "07/24"){
         window.location.href = "cake.html";
     } else {
-        alert("Wrong password 💔");
+        alert("Wrong password 💔 Try again");
     }
 }
 
+/* SHOW / HIDE PASSWORD */
+function togglePassword(){
+    let pass = document.getElementById("pass");
+
+    if(pass.type === "password"){
+        pass.type = "text";
+    } else {
+        pass.type = "password";
+    }
+}
 
 /* CLICK SOUND */
 let clickSound = new Audio("sound/click.mp3");
 
-
+/* OPEN MEDIA */
 function openMedia(type, src, title){
 
-    // play click sound safely
     clickSound.currentTime = 0;
     clickSound.play();
 
@@ -25,9 +34,9 @@ function openMedia(type, src, title){
     let v = document.getElementById("video");
     let a = document.getElementById("audio");
 
-    // reset both
     v.pause();
     a.pause();
+
     v.style.display = "none";
     a.style.display = "none";
 
@@ -44,7 +53,7 @@ function openMedia(type, src, title){
     }
 }
 
-
+/* CLOSE POPUP */
 function closeMedia(){
 
     document.getElementById("popup").style.display = "none";
@@ -52,7 +61,6 @@ function closeMedia(){
     let v = document.getElementById("video");
     let a = document.getElementById("audio");
 
-    // STOP media properly
     v.pause();
     a.pause();
 
