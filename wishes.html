@@ -1,5 +1,15 @@
 <body class="center">
 
+    <audio id="bgMusic" loop>
+  <source src="music/bg.mp3" type="audio/mp3">
+</audio>
+
+<script>
+document.body.addEventListener('click', function () {
+    document.getElementById('bgMusic').play();
+}, { once: true });
+</script>
+
 <div class="glass">
 <h1>❤️ My Wishes</h1>
 <p>You are my forever love 💖</p>
